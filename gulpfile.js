@@ -75,3 +75,15 @@ gulp.task('extras', () => {
 gulp.task('build', ['html', 'images','extras','install'], () => {
   return gulp.src('dist/**/*');
 });
+
+// Deply GitHub Page
+var ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy_github', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
+gulp.task('deploy', ['build', 'deploy_github'], () => {
+  return gulp.src('dist/**/*');
+});

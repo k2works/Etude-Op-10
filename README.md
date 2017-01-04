@@ -428,5 +428,36 @@ $ heroku domains
 $ heroku destroy op-10
 ```
 
+### GitHub Pageにデプロイする
+
+#### プラグインのインストール
+```
+$ cd /vagrant
+$ npm install --save-dev gulp-gh-pages
+```
+
+#### gulpタスクの追加
+
+```
+// Deply GitHub Page
+var ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy_github', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
+gulp.task('deploy', ['build', 'deploy_github'], () => {
+  return gulp.src('dist/**/*');
+});
+```
+
+#### デプロイ
+```
+$ cd /vagrant
+$ gulp deploy
+```
+`https://k2works.github.io/Etude-Op-10/`に接続して動作を確認する
+
 # 参照 #
 + [takanashi66/wtm95_gulp_demo](https://github.com/takanashi66/wtm95_gulp_demo)
