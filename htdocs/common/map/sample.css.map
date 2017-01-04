@@ -1,1 +1,1 @@
-{"version":3,"sources":["sample.scss"],"names":[],"mappings":"AAIA;EACE,0BAHkB,EAInB;;AAED;EAEI,eARgB,EASjB","file":"../sass/sample.css","sourcesContent":["@charset \"UTF-8\";\n\n$mainColor : #2576E5;\n\nheader {\n  background-color: $mainColor;\n}\n\n.main {\n  p{    \n    color: $mainColor;\n  }\n}\n"]}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"../sass/sample.css","sourcesContent":[]}

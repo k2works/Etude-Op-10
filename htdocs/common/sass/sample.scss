@@ -1,13 +1,6 @@
 @charset "UTF-8";
 
-$mainColor : #2576E5;
-
-header {
-  background-color: $mainColor;
-}
-
-.main {
-  p{    
-    color: $mainColor;
-  }
+@mixin redText {
+  color:red;
+  font-size: 12px;
 }
