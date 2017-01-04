@@ -1,7 +1,6 @@
-.text {
+p {
   color:red;
 }
-
-.box p {
+.box {
   color:blue;
 }
