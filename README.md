@@ -178,6 +178,9 @@ $ cd /vagrant
 $ touch htdocs/common/sass/sample.scss
 ```
 
+#### 「&」を使って親参照する
+
+
 ## HTMLの基礎
 
 ### HTMLについて

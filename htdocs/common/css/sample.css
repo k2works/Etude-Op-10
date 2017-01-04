@@ -1,6 +1,6 @@
 p {
   color: red; }
-  p .blue {
+  p.blue {
     color: blue; }
 
 /*# sourceMappingURL=../map/sample.css.map */

@@ -2,7 +2,7 @@
 
 p {
   color:red;
-  .blue {
+  &.blue {
     color:blue
   }
 }
