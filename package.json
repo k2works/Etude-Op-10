@@ -1,31 +1,16 @@
 {
-  "name": "vagrant",
+  "name": "app",
   "version": "1.0.0",
-  "description": "===================",
-  "main": "index.js",
+  "description": "",
+  "main": "web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/k2works/Etude-Op-10.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/k2works/Etude-Op-10/issues"
-  },
-  "homepage": "https://github.com/k2works/Etude-Op-10#readme",
-  "devDependencies": {
-    "browser-sync": "^2.18.5",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^3.0.0",
-    "gulp-sourcemaps": "^1.9.1"
-  },
   "dependencies": {
-    "gulp-install": "^0.6.0",
-    "gulp-load-plugins": "^1.4.0"
+    "express": "^4.14.0",
+    "gzippo": "^0.2.0",
+    "morgan": "^1.7.0"
   }
 }
