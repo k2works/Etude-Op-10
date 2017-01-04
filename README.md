@@ -149,7 +149,9 @@ $ touch htdocs/common/css/sample.css
 
 #### CSSをHTMLに適用するには?
 + インラインCSSは使わない
-  
+
+#### CSSの適用ルール（詳細度）
+
 ### Sass
 
 ## HTMLの基礎
