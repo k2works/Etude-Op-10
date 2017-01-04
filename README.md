@@ -282,5 +282,7 @@ $ touch htdocs/common/sass/sample.scss
 </ul>  
 ```
 
+## アプリケーションのデプロイ
+
 # 参照 #
 + [takanashi66/wtm95_gulp_demo](https://github.com/takanashi66/wtm95_gulp_demo)
