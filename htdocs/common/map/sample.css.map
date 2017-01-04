@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"../sass/sample.css","sourcesContent":[]}
+{"version":3,"sources":["sample.scss"],"names":[],"mappings":"AAOA;EAJE,WAAS;EACT,gBAAe,EAKhB;;AAED;EARE,WAAS;EACT,gBAAe,EAShB","file":"../sass/sample.css","sourcesContent":["@charset \"UTF-8\";\n\n@mixin redText {\n  color:red;\n  font-size: 12px;\n}\n\n.text1 {\n  @include redText;\n}\n\n.text2 {\n  @include redText;\n}\n"]}

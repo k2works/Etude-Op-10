@@ -4,3 +4,11 @@
   color:red;
   font-size: 12px;
 }
+
+.text1 {
+  @include redText;
+}
+
+.text2 {
+  @include redText;
+}
