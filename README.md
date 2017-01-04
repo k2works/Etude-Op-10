@@ -284,5 +284,69 @@ $ touch htdocs/common/sass/sample.scss
 
 ## アプリケーションのデプロイ
 
+### Nodeアプリケーションとして実行できるようにする
+```
+$ cd /vagrant
+$ cd htdocs && npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+name: (htdocs) app
+version: (1.0.0)
+description:
+entry point: (index.js) web.js
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to /vagrant/htdocs/package.json:
+
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+Is this ok? (yes) yes
+$ npm install express morgan gzippo --save
+$ touch web.js
+```
+
+`web.js`
+```
+var express = require('express');
+var http = require('http');
+var gzippo = require('gzippo');
+var logger = require('morgan');
+var app = express();
+app.use(logger());
+app.use(gzippo.staticGzip('' + __dirname));
+var server = http.createServer(app);
+server.listen(process.env.PORT || 3000);
+```
+
+```
+$ cd /vagrant/htdocs
+$ node web.js
+```
+
+`http://192.168.30.1:3000`に接続して動作を確認する
+
+
 # 参照 #
 + [takanashi66/wtm95_gulp_demo](https://github.com/takanashi66/wtm95_gulp_demo)
