@@ -17,6 +17,92 @@ HTML/CSSとSassの基本
 ## Sassコンパイル環境の構築
 
 ### 開発環境を構築しよう
+package.jsonのセットアップ
+```
+$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+name: (vagrant)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository: (https://github.com/k2works/Etude-Op-10.git)
+keywords:
+author:
+license: (ISC)
+About to write to /vagrant/package.json:
+
+{
+  "name": "vagrant",
+  "version": "1.0.0",
+  "description": "===================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k2works/Etude-Op-10.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k2works/Etude-Op-10/issues"
+  },
+  "homepage": "https://github.com/k2works/Etude-Op-10#readme"
+}
+
+
+Is this ok? (yes) yes
+```
+
+gulpのインストール
+```
+$ npm install -g gulp
+```
+
+プラグインのインストール
+```
+$ npm i --save-dev gulp
+$ npm i --save-dev browser-sync
+$ npm i --save-dev gulp-sass
+$ npm i --save-dev gulp-plumber
+$ npm i --save-dev gulp-autoprefixer
+$ npm i --save-dev gulp-sourcemaps
+```
+
+ディレクトリのセットアップ
+```
+$ cd /vagrant
+$ mkdir -p htdocs/common/sass
+$ mkdir -p htdocs/common/css
+$ mkdir -p htdocs/common/map
+$ mkdir -p htdocs/common/img
+$ mkdir -p htdocs/common/js
+$ touch htdocs/index.html
+```
+
+gulpタスクのセットアップ
+```
+$ cd /vagrant
+$ touch gulpfile.js
+```
+
+開発環境を実行する
+```
+$ gulp
+```
+
+`http://192.168.30.1:3000`に接続して動作を確認する
 
 ## HTML/CSSとSassの基本
 
@@ -33,3 +119,4 @@ HTML/CSSとSassの基本
 ### 各種HTMLタグの解説
 
 # 参照 #
++ [takanashi66/wtm95_gulp_demo](https://github.com/takanashi66/wtm95_gulp_demo)

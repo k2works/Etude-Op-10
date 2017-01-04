@@ -3,9 +3,10 @@ services:
   web:
     build: .
     ports:
-     - "9009:9009"
+     - "3000:3000"
     volumes:
      - .:/code
+    command: gulp
   proxy:
     image: nginx:1.11
     ports:
