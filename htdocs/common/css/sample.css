@@ -1,6 +1,7 @@
-p {
-  color: red; }
-  p.blue {
-    color: blue; }
+header {
+  background-color: #2576E5; }
+
+.main p {
+  color: #2576E5; }
 
 /*# sourceMappingURL=../map/sample.css.map */

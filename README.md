@@ -180,6 +180,7 @@ $ touch htdocs/common/sass/sample.scss
 
 #### 「&」を使って親参照する
 
+#### 変数
 
 ## HTMLの基礎
 
