@@ -159,6 +159,7 @@ $ touch htdocs/common/css/sample.css
 | classセレクタ | .text      | 複数可                      | 中      |
 | idセレクタ    | #logo      | 一度のみ                     | 大      |
 
+#### 「!important」について
 
 ### Sass
 
