@@ -108,6 +108,22 @@ $ gulp
 
 ### HTML
 
+#### HTMLを書く際のポイント
++ HTML5を使用する
++ lang属性を設定する
+```
+<html lang="ja-jp">
+</html>
+```
++ 「IE互換モード」の設定をする
+```
+<meta http-equiv="X-UA-Compatible" content="IE=Ede"
+```
++ 文字コードはUTF-8で設定する
+```
+<meta charset="UTF-8">
+```
+
 ### CSS
 
 ### Sass
