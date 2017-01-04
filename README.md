@@ -197,6 +197,90 @@ $ touch htdocs/common/sass/sample.scss
 ### HTMLについて
 
 ### 各種HTMLタグの解説
++ html/head/bodyタグ
+
+```
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>サンプル</title>
+</head>
+<body>
+
+</body>
+</html>
+```
+
++ viewport
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
++ h1〜h6
+
+```
+<h1>見出し</h1>
+```
+
++ header
+
+```
+<header></header>
+```
+
++ footer
+
+```
+<footer></footer>
+```
+
++ article
+
+```
+<article></article>
+```
+
++ section
+
+```
+<sction></section>
+```
+
++ nav
+
+```
+<nav></nav>
+```
+
++ p
+
+```
+<p>テキストテキストテキスト</p>
+```
+
++ a
+
+```
+<a href="http://リンク先URL">リンクテキスト</a>
+<a href="#ID名">ページ内リンクテキスト</a>
+```
+
++ img
+
+```
+<img src="" alt="">
+```
+
++ ulとli
+```
+<ul>
+  <li>リスト</li>
+  <li>リスト</li>
+  <li>リスト</li>    
+</ul>  
+```
 
 # 参照 #
 + [takanashi66/wtm95_gulp_demo](https://github.com/takanashi66/wtm95_gulp_demo)
