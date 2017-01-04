@@ -134,6 +134,7 @@ $ gulp
 
 #### CSSを書こう
 ```
+$ cd /vagrant
 $ touch htdocs/common/css/sample.css
 ```
 
@@ -169,6 +170,13 @@ $ touch htdocs/common/css/sample.css
 + なるべくコメントは残すようにする
 
 ### Sass
+
+#### Sassとネスト機能について
+
+```
+$ cd /vagrant
+$ touch htdocs/common/sass/sample.scss
+```
 
 ## HTMLの基礎
 

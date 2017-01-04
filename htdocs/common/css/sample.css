@@ -1,5 +1,6 @@
-/* ここがコメントです */
-
 p {
-  color:red;
-}
+  color: red; }
+  p .blue {
+    color: blue; }
+
+/*# sourceMappingURL=../map/sample.css.map */

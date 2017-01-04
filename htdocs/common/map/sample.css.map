@@ -1,0 +1,1 @@
+{"version":3,"sources":["sample.scss"],"names":[],"mappings":"AAEA;EACE,WAAS,EAIV;EALD;IAGI,YACF,EAAE","file":"../sass/sample.css","sourcesContent":["@charset \"UTF-8\";\n\np {\n  color:red;\n  .blue {\n    color:blue\n  }\n}\n"]}
