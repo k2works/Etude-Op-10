@@ -137,6 +137,16 @@ $ gulp
 $ touch htdocs/common/css/sample.css
 ```
 
+#### classに対してスタイルをつける
++ classやidとは?
+  + セレクタ:pというHTML要素で、かつblueというclassが付与されているものに対して、
+  + プロパティ:テキストの色を、
+  + 値:青色にする
+
++ classとidの違い
+  + class: 同じclassを複数使うことができる
+  + id: 同じidはそのページの中で1度のみ使える
+
 ### Sass
 
 ## HTMLの基礎
