@@ -1,14 +1,13 @@
 @charset "UTF-8";
 
-@mixin redText {
-  color:red;
-  font-size: 12px;
+/* CSSでもSassでも使えるコメントです */
+.main {
+  font-size: 14px;
+}
+//Sassでしか使えないコメントです
+.main {
+  font-size: 14px;
 }
 
-.text1 {
-  @include redText;
-}
-
-.text2 {
-  @include redText;
-}
+/* コンパイル後もCSSに残る */
+//コンパイル後CSSにの残らない

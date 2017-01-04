@@ -1,9 +1,11 @@
-.text1 {
-  color: red;
-  font-size: 12px; }
+@charset "UTF-8";
+/* CSSでもSassでも使えるコメントです */
+.main {
+  font-size: 14px; }
 
-.text2 {
-  color: red;
-  font-size: 12px; }
+.main {
+  font-size: 14px; }
+
+/* コンパイル後もCSSに残る */
 
 /*# sourceMappingURL=../map/sample.css.map */
