@@ -347,6 +347,86 @@ $ node web.js
 
 `http://192.168.30.1:3000`に接続して動作を確認する
 
+### Herokuにアプリケーションをデプロイする
+
+#### gulp-install追加
+```
+$ cd /vagrant
+$ npm install --save gulp-install
+```
+
+#### Procfileの追加
+```
+$ touch /vagrant/htdocs/Procfile
+```
+
+`Procfile`
+```
+web: node web.js
+```
+
+#### gulpタスクの追加
+
+```
+// Install npm module
+var install = require("gulp-install");
+
+gulp.task('install', function() {
+  gulp.src(['./htdocs/package.json'])
+    .pipe(gulp.dest('./dist'))
+    .pipe(install());
+});
+
+gulp.task('styles', () => {
+  return gulp.src('htdocs/common/css/*.css')
+    .pipe(gulp.dest('dist/common/css'));
+});
+
+gulp.task('html', ['sass','styles'], () => {
+  return gulp.src('htdocs/*.html')
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('images', () => {
+  return gulp.src('htdocs/common/img/**/*')
+    .pipe(gulp.dest('dist/common/img'));
+});
+
+gulp.task('extras', () => {
+  return gulp.src([
+    'htdocs/*',
+    'htdocs/*.*',
+    '!htdocs/*.html'
+  ], {
+    dot: true
+  }).pipe(gulp.dest('dist'));
+});
+
+gulp.task('build', ['html', 'images','extras','install'], () => {
+  return gulp.src('dist/**/*');
+});
+```
+
+#### Herokuデプロイ
+デプロイ用レポジトリの作成
+```
+$ cd /vagrant
+$ gulp build
+$ cd dist
+$ git init
+$ git add -A
+$ git config --global user.email "you@example.com"
+$ git config --global user.name "Your Name"
+$ git commit -m 'Initial Commit'
+```
+
+Herokuアプリケーションのセットアップ
+```
+$ heroku create op-10
+$ git push heroku master
+$ heroku domains
+$ heroku destroy op-10
+```
 
 # 参照 #
 + [takanashi66/wtm95_gulp_demo](https://github.com/takanashi66/wtm95_gulp_demo)

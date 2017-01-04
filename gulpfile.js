@@ -37,3 +37,41 @@ gulp.task('watch', function(){
 });
 
 gulp.task('default', ['browser-sync','watch']);
+
+// Install npm module
+var install = require("gulp-install");
+
+gulp.task('install', function() {
+  gulp.src(['./htdocs/package.json'])
+    .pipe(gulp.dest('./dist'))
+    .pipe(install());
+});
+
+gulp.task('styles', () => {
+  return gulp.src('htdocs/common/css/*.css')
+    .pipe(gulp.dest('dist/common/css'));
+});
+
+gulp.task('html', ['sass','styles'], () => {
+  return gulp.src('htdocs/*.html')
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('images', () => {
+  return gulp.src('htdocs/common/img/**/*')
+    .pipe(gulp.dest('dist/common/img'));
+});
+
+gulp.task('extras', () => {
+  return gulp.src([
+    'htdocs/*',
+    'htdocs/*.*',
+    '!htdocs/*.html'
+  ], {
+    dot: true
+  }).pipe(gulp.dest('dist'));
+});
+
+gulp.task('build', ['html', 'images','extras','install'], () => {
+  return gulp.src('dist/**/*');
+});
