@@ -132,6 +132,11 @@ $ gulp
 + 閉じ波括弧は新しい行に記述する
 + :のあとに1つの半角スペースを入れる
 
+#### CSSを書こう
+```
+$ touch htdocs/common/css/sample.css
+```
+
 ### Sass
 
 ## HTMLの基礎
