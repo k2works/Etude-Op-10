@@ -147,6 +147,9 @@ $ touch htdocs/common/css/sample.css
   + class: 同じclassを複数使うことができる
   + id: 同じidはそのページの中で1度のみ使える
 
+#### CSSをHTMLに適用するには?
++ インラインCSSは使わない
+  
 ### Sass
 
 ## HTMLの基礎
